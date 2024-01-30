@@ -17,15 +17,17 @@ from twilio.rest import Client
 # DataBase Path
 DB_PATH = r'db\produse.db'
 
-JSON_PATH_NIR_NUMBER = os.getenv('JSON_PATH_NIR')
-JSON_PATH_EXCEL_NUMBER = os.getenv('JSON_PATH_EXCEL')
-JSON_PATH_ROW_NUMBER = os.getenv('JSON_PATH_ROW_NUMBER')
+# Initialize path variables
+JSON_PATH_NIR_NUMBER = r'JsonFiles\NirNumber.json'
+JSON_PATH_EXCEL_NUMBER = r'JsonFiles\ExcelNumber.json'
+JSON_PATH_ROW_NUMBER = r'JsonFiles\NirNumber.json'
 JSON_PATH_FURIZORI = r'JsonFiles\Furnizori.json'
 JSON_PATH_PRODUSE = r'JsonFiles\AllProducts.json'
 JSON_PATH_CUSTOMERS = r'JsonFiles\customers.json'
 JSON_PATH_DICT_ALL_DATA = r'JsonFiles\dict_all_product.json'
 PATH_TO_USERS = "your\\path\\to\\users"
 
+# Initialize bool variables
 bool_data_complete = True
 bool_is_in_db = False
 is_complete = True
