@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>NIR</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/add_p.css'>
+    <script src="https://kit.fontawesome.com/f72ab65de3.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    {% if bool_is_in_db == False %}
+    <div class="container">
+        <form action="/add_product" method="POST">
+
+            <div class="top_b">
+                <a href="{{url_for('start')}}">back</a>
+                <form action="/add_button">
+                    <button>Search</button>
+                </form>
+                <p>rec note</p>
+            </div>
+
+            <div class="data-box">
+                {% for cl in data%}
+                <div class="inp_box">
+                    <p><a href="{{ url_for('edit_cust', p1=cl) }}">{{cl}}</a></p>
+                </div>
+                {% endfor %}
+            </div>
+        
+                <div class="icon-container">
+
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <form action="/preview">
+                    <button><i class="fa-solid fa-eye"></i></button>
+                </form>
+                <form action="/final_preview">
+                    <button><i class="fa-solid fa-check"></i></button>
+                </form>
+                <form action="/start">
+                    <button><i class="fa-solid fa-house"></i></button>
+                </form>
+                
+            </div>
+
+
+
+
+    </div>
+    {% endif %}
+
+    {% if bool_is_in_db == True %}
+    <div class="container">
+        <form action="/add_to_nir" method="POST">
+
+            <div class="data-box">
+                {% if bool_cant == True%}
+                <p>Invalid data</p>
+                {% endif %}
+                <div class="input">
+                    <div class="search-box">
+                        <div class="row">
+                            <p id="id2">Product</p>
+                            <input type="text" name="produs" id="input-box"
+                                autocomplete="off" value="{{product}}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input">
+                    <p>Amount</p>
+                    <input type="text" name="nrProd" id="">
+                </div>
+                
+                
+            </div>
+            
+            <div class="icon-container2">
+                
+                <button><i class="fa-solid fa-plus"></i></button>
+
+            </div>
+
+        </form>
+    </div>
+    {% endif %}
+    <script src="../static/main.js"></script>
+</body>
+
+</html>

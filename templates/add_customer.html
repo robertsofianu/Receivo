@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/add_customer.css'>
+    <script src="https://kit.fontawesome.com/f72ab65de3.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container">
+
+        <div class="top_b">
+            <p>customers</p>
+        </div>
+        
+        <form action="/add_client_db" method="POST">
+            <div class="data-box">
+                <div class="inp_box">
+                    <p>First Name</p>
+                    <input type="text" name="prenume" id="">
+                </div>
+
+                <div class="inp_box">
+                    <p>Last Name</p>
+                    <input type="text" name="nume" id="">
+                </div>
+
+                <div class="inp_box">
+                    <p>Amout</p>
+                    <input type="text" name="bani" id="">
+                </div>
+            </div>
+
+            <div class="add_cus">
+                <button><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

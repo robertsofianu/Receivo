@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Calculation</title>
+</head>
+<body>
+
+<div class="input">
+    <p>V.A.T.</p>
+    <select name="vat" id="vat">
+        {% if vat == '9' %}
+        <option value="9">9%</option>
+        <option value="19">19%</option>
+        {% else %}
+        <option value="19">19%</option>
+        <option value="9">9%</option>
+        {% endif %}
+    </select>
+</div>
+
+<div class="input">
+    <p>Provider price</p>
+    <input type="text" value="{{pp}}" name="pp" id="providerPrice">
+</div>
+
+<div class="input">
+    <p>Sell price</p>
+    <input type="text" value="{{sp}}" name="sp" id="sellPrice">
+</div>
+
+<script>
+    // Get elements
+    var providerPriceInput = document.getElementById('providerPrice');
+    var sellPriceInput = document.getElementById('sellPrice');
+    var vatSelect = document.getElementById('vat');
+
+    // Add event listener to provider price input
+    providerPriceInput.addEventListener('input', calculateSellPrice);
+
+    // Function to calculate sell price
+    function calculateSellPrice() {
+        var providerPrice = parseFloat(providerPriceInput.value);
+        var vatRate = parseFloat(vatSelect.value) / 100;
+        var sellPrice = providerPrice * 1.3 * (1 + vatRate);
+
+        // Update the sell price input field
+        sellPriceInput.value = sellPrice.toFixed(2);
+    }
+</script>
+
+</body>
+</html>

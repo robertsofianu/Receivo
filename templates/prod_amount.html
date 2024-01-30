@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/p_a.css'>
+    <script src="https://kit.fontawesome.com/f72ab65de3.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="top_b">
+            <a href="{{ url_for('back', param = 1) }}">back</a>
+            <p>product</p>
+        </div>
+
+
+
+
+
+
+        <form action="/add_to_nir" method="POST">
+
+            <div class="data-box">
+
+                <div class="input">
+                    <p id="p1">Product</p>                
+                    <input type="text" name="produs" value="{{p1}}" id="input" autocomplete="off">
+                    <ul id="autocomplete-list"></ul>
+                </div>
+
+                <div class="input">
+                    <p id="p1">Amount</p>                
+                    <input type="text" name="nrProd" >
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="icon-container">
+                    <button id="check"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            
+        </form>
+
+
+
+    </div>
+    <script src="../static/prod_js.js"></script>
+</body>
+</html>

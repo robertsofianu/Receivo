@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/add_product_mobile.css'>
+    <script src="https://kit.fontawesome.com/f72ab65de3.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="top_b">
+            <a href="{{ url_for('back', param = 3) }}">back</a>
+            <p>customer</p>
+        </div>
+
+
+
+
+
+
+      
+
+        <div class="data-box">
+            <form action="/add_desktop" method="POST">
+
+                <div class="input">
+                    <p id="p1">Product</p>                
+                    <input type="text" name="p_desk" value="{{p1}}" id="input" autocomplete="off" disabled>
+                </div>
+    
+                <div class="input">
+                    <p id="p1">Amount</p>                
+                    <input type="text" name="am_d" id="amount">
+                </div>
+                
+                <div class="icon-container">
+                    <div class="button_int">
+                        <button id="check"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+                
+            </form>
+            
+            
+        </div>
+
+    </div>
+    <!-- <script src="../static/add_c_amout.js"></script> -->
+</body>
+</html>

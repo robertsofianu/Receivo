@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>NIR</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/main2.css'>
+    <script src="https://kit.fontawesome.com/f72ab65de3.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="data-boxa">
+            
+               
+            <div class="top_b">
+                <a href="{{url_for('start')}}">back</a>
+                <form action="/add_button">
+                    <button>Search</button>
+                </form>
+                <p>rec note</p>
+            </div>
+
+            <div class="rec_data">
+                <div class="inp_box" id="ip2">
+                    <p>Date</p>
+                    <input type="text" value="{{l_factura[0]}}" disabled>
+                </div>
+                <div class="inp_box" id="ip2">
+                    <p>Number</p>
+                    <input type="text" value="{{l_factura[1]}}" disabled>
+                </div>
+                <div class="inp_box" id="ip2">
+                    <p>Provider</p>
+                    <input type="text" value="{{l_factura[2]}}" disabled>
+                </div>
+            </div>
+
+            <div class="data-box">
+                {% for cl in data%}
+                <div class="inp_box">
+                    <p><a href="{{ url_for('add_product_everywhere', p1=cl) }}">{{cl}}</a></p>
+                </div>
+                {% endfor %}
+            </div>
+            
+            
+            <div class="icon-container">
+                <form action="/final_preview">
+                    <button><i class="fa-solid fa-check"></i></button>
+                </form>
+                <form action="/start">
+                    <button><i class="fa-solid fa-house"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="desk_container">
+            <div class="main_buttons">
+
+                <div class="button_main">
+                    <form action="/start">
+                        <button><i class="fa-solid fa-home"></i></button>
+                        <p>Home</p>
+                    </form>
+                </div>
+
+                <div class="button_main">
+                    <form action="/product_info">
+                        <button><i class="fa-solid fa-tag"></i></button>
+                        <p>Products</p>
+                    </form>
+                </div>
+
+                <div class="button_main">
+                    <form action="/clients">
+                        <button><i class="fa-solid fa-users"></i></i></button>
+                        <p>Customers</p>
+                    </form>
+                </div>
+
+            </div> 
+
+            <div class="up">
+                    
+                    <div class="first_part">
+
+                        <div class="date_firma">
+                            <div class="data_nir" id="first_data">
+                                <p>S.C.</p>
+                                <input type="text" value="PROTOSOF S.R.L.">
+                            </div>
+                            <div class="data_nir">
+                                <p>Localitatea</p>
+                                <input type="text" name="" id="" value="Protopopesti" disabled>
+                            </div>
+                        </div>
+
+                        <h1>NOTA DE RECEPTIE</h1>
+                        <div class="data_nir">
+                            <P>Nr.</P>
+                            <input type="number" name="desk_nr_number" id="" value="5203" disabled>
+                        </div>
+                        <div class="data_nir">
+                            <p>Din</p>
+                            <input type="date" name="date_desk" id="" value="{{list_1[0]}}" disabled>
+                        </div>
+                    </div>
+
+                    <div class="second_part">
+                        <div class="data_nir" id="d2">
+                            <div class="search-box">
+                                <div class="row">
+                                    <p>
+                                        Furnizor
+                                    </p>
+                                    <input type="text" name="furnizor_desk" 
+                                        autocomplete="off" value="{{list_1[2]}}" disabled>
+                                </div>
+    
+                            </div>
+                        </div>
+                        <div class="data_nir" id="d2">
+                            <p>Numarul si data facturii sau avizului de expediere</p>
+                            <input type="text" name="numar_factura_desk" id="" value="{{list_1[1]}}" disabled>
+                        </div>
+                        <div class="data_nir" id="d2">
+                            <p>Numele si prenumele delegatului</p>
+                            <input type="text" name="nume_delegat_desk" id="" disabled>
+                        </div>
+
+                        <div class="data_nir" id="d3">
+                            <p>B.I. Seria <input type="text" name="" id="little_inp"> nr. <input type="text" name="" id="little_inp"> eliberat de Politia <input type="text" name="" id="little_inp1"></p>
+                        </div>
+                    </div>
+
+
+                    <div class="b_c">
+
+                        <button disabled>Create nir</button>
+
+                    </div>
+
+
+
+            
+            </div>
+
+            <div class="search_box" id="specificPoint">
+                <div class="sp_content">
+                    <form action="/add_desktop" method="POST" id="myForm2">
+                        
+                        
+                        <div class="row2">
+                            <p>
+                                Product
+                            </p>
+                            <input type="text" name="p_desk" id="input-box"
+                                autocomplete="off" >
+                        </div>
+
+                        <div class="result-box">
+                            <ul>
+                                <li></li> 
+                            </ul>
+                        </div>
+
+                        <div class="row2" id="pad_row">
+                            <p>Amout</p>
+                            <input type="text" name="am_d" id="amount">
+                        </div>
+
+                        <button id="file_exb2" style="display: none;" type="submit" disabled>Add</button>
+                        
+                    </form>
+                </div>
+            </div>
+
+            <div class="midle">
+                <form action="/fini_desk" method="POST">
+                    
+                    <table class="table-box">
+                        <tr>
+                            <th>Denumire Produs</th>
+                            <th>U/M</th>
+                            <th>T.V.A.</th>
+                            <th>Dupa factura sau aviz</th>
+                            <th>La receptie</th>
+                            <th>Pret Furnizor</th>
+                            <th>Pret cu adaosul practicat %</th>
+                        </tr>
+    
+                        {% for elem in d%}
+                        <tr>
+                            <td><input type="text" name="{{elem[7]}}" id="" value="{{elem[0]}}"></td>
+                            <td>
+                                <!-- <input type="text" name="{{elem[10]}}" id="shortinp" value="{{elem[3]}}"> -->
+                                <select name="{{elem[10]}}" id="shortinp">
+                                    {% if elem[3] == "BUC" %}
+                                        <option value="BUC">BUC</option>
+                                        <option value="KG">KG</option>
+                                    {% else %}
+                                        <option value="KG">KG</option>
+                                        <option value="BUC">BUC</option>
+                                    {% endif %}
+                                </select>
+                            </td>
+                            <td>
+                                <!-- <input type="text" name="{{elem[12]}}" id="shortinp" value="{{elem[5]}}"> -->
+                                <select name="{{elem[12]}}" id="shortinp">
+                                    {% if elem[5] == "9" %}
+                                        <option value="9">9%</option>
+                                        <option value="19">19%</option>
+                                    {% else %}
+                                        <option value="19%">19%</option>
+                                        <option value="9%">9%</option>
+                                    {% endif %}
+                                </select>
+                            </td>
+
+                            <td><input type="text" name="{{elem[11]}}" id="shortinp" value="{{elem[4]}}"></td>
+                            <td><input type="text" id="shortinp" value="{{elem[4]}}"></td>
+                            <td><input type="text" name="{{elem[8]}}" id="shortinp" value="{{elem[1]}}"></td>
+
+                            <td><input type="text" name="{{elem[9]}}" id="shortinp" value="{{elem[2]}}"></td>
+                            <td>
+                                <a href="{{ url_for('modify_page', parameter1=elem[0]) }}"><button type="button"><i class="fa-solid fa-pen-to-square"></i></button></a>
+                            </td>
+                            <td>
+                                <a href="{{ url_for('delete', parameter1=elem[7]) }}"><button type="button"><i class="fa-solid fa-trash"></i></a>
+                            </td>
+
+                        </tr>
+                        {% endfor %}
+                    </table>
+    
+                    <div class="f_button">
+    
+                        <button>Finish</button>
+    
+                    </div>
+
+                </form>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+    
+    <script src="../static/main2.js"></script>
+    
+</body>
+
+</html>

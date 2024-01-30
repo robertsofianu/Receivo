@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .container{
+        text-align: center;
+    }
+    
+    .data-box{
+        max-width: 100%;
+        width: calc(100% - 0px); 
+        max-width: 1200px; 
+        height: auto;
+        max-height:calc(100% - 200px);
+        margin-top: 330px;
+        margin-bottom: 58px;
+        background-color: #0f0f0f;
+        border-top: 1px solid #0f0f0f;
+        border-bottom: 1px solid #0f0f0f;
+
+    }
+    
+    .top_b{
+        position: fixed;
+        top: 0;
+        background-color: #0f0f0f;
+        width: calc(100% - 0px); 
+        max-width: 1200px; 
+        height: auto;
+        border-bottom: 1px solid #333;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top_b a{
+        font-size: 15px;
+        margin-left: 20px;
+        color: #fdfdfd;
+    }
+
+    .top_b form{
+        background: #333;
+        border: 1px solid #333;
+        border-radius: 5px;
+        padding-left: 5px;
+        height: 25px;
+        width: calc(100% - 250px);
+        color: #666;
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .top_b form button{
+        background-color: transparent;
+        border: none;
+        color: #666;
+        width: calc(100% - 3px); 
+        text-align: left;
+    }
+
+    .top_b p{
+        font-size: 15px;
+        margin-right: 20px;
+        color: #fdfdfd;
+    }
+
+    #ip2{
+        background-color: #0f0f0f;
+    }
+
+    #ip2 p{
+        color: #cacaca;
+        font-size: 20px;
+        padding-bottom: 5px;
+    }
+
+    #ip2 input{
+        background: #000;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding-left: 5px;
+        height: 30px;
+        width: calc(100% - 50px);
+        color: #adadad;
+        padding-left: 5px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    .inp_box{
+        background-color: #000;
+        width: calc(100% - 0px); 
+        max-width: 1200px; 
+        height: auto;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .inp_box a{
+        color: #cacaca;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .data-box p{
+        color: #fdfdfd;
+        font-size: 20px;
+    }
+    
+    
+    .input input{
+        background: #fdfdfd;
+        border: 1px solid #fdfdfd;
+        border-radius: 5px;
+        padding-left: 5px;
+        height: 40px;
+        width: calc(100% - 50px);
+        color: #fdfdfd;
+        padding-left: 5px;
+        color: #0f0f0f;
+        font-size: 20px;
+    }
+    
+    
+    
+    .icon-container {
+        position: fixed;
+        bottom: 0px; 
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 60px);
+        background-color: #0f0f0f;
+        border-top: 1px solid #333;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .icon-container button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+    }
+    
+    .icon-container i {
+        font-size: 30px; 
+    }
+    
+
+
+
+    .rec_data{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        margin-top: 48px;
+        background-color: #000;
+        border-bottom:1px solid #666;
+    }
+    .desk_container{
+        display: none;
+    }
+
+}
+
+
+
+@media screen and (min-width: 700px) {
+    .container{
+        text-align: center;
+        padding: 100px;
+    }
+    
+    .data-box{
+        display: none;
+    }
+
+    .data-boxa{
+        display: none;
+    }
+
+    .icon-container{
+        display: none;
+    }
+
+    .desk_container{
+        width: 100%;
+        height: auto;
+        min-height: 70%;
+        background-color: transparent;
+        /* border: 1px solid #0f0f0f; */
+        background-color: transparent;
+        border-radius: 8px;
+        text-align: center;
+        overflow-y: scroll;
+    }
+
+    .up{
+        background-color: #1b1b1b;
+        padding-top: 1px;
+        padding-bottom: 30px;
+        border-radius: 8px;
+        margin-bottom: 50px;
+    }
+
+    .main_buttons{
+        background: none;
+        border-radius: 8px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .button_main{
+        background-color: #1b1b1b;
+        border-radius: 8px;
+        width: 31.5%;
+        height: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .button_main button{
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .button_main p{
+        color: #fdfdfd;
+        font-size: 15px;
+    }
+
+    .button_main i{
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+
+    .midle{
+        background-color: #1b1b1b;
+        padding-top: 1px;
+        padding-bottom: 30px;
+        border-radius: 8px;
+    }
+
+    .search_box{
+        background-color: #1b1b1b;
+        padding-top: 1px;
+        padding-bottom: 30px;
+        border-radius: 8px;
+        margin-bottom: 50px;
+    }
+    .sp_content{
+       padding: 30px; 
+       padding-bottom: 0px;
+       width: 50%;
+       margin-left: 25%;
+    }
+    .sp_content button{
+        margin-top: 50px;
+        width: 100%;
+
+    }
+
+
+    .row2{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #pad_row{
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+    }
+
+    .row2 p{
+        font-size: 15px;
+        color: #fdfdfd;
+    }
+
+    .row2 input{
+        width: 80%;
+        background-color: #1b1b1b;
+        border: 1px solid #1b1b1b;
+        border-bottom: 1px solid #fdfdfd;
+        color: #fdfdfd;
+        font-size: 15px;
+        padding-left: 5px;
+    }
+
+    .result-box2{
+        font-size: 15px;
+        background-color: #222;
+        width: 100%;
+        overflow-y: scroll;
+        height: auto;
+        max-height: 350px;
+        border-left: 1px solid #cacaca;
+        border-right: 1px solid #cacaca;
+
+    }
+
+    .result-box2::-webkit-scrollbar{
+        display: none;
+    }
+
+    .result-box2 ul{
+        list-style: none;
+        color: #cacaca;
+    }
+
+    .result-box2 li{
+        border-bottom: 1px solid #cacaca;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+
+    .desk_container::-webkit-scrollbar{
+        display: none;
+    }
+
+
+    .first_part{
+        margin-top: 30px;
+        color: #fff;
+        width: calc(100% - 100px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 50px;
+        padding-right: 50px;
+    } 
+    
+    .b_c {
+        width: 60%;
+        margin-left: 22%;
+        margin-top: 50px;
+    }
+
+    .b_c button{
+        width: 100%;
+    }
+
+
+    .data_nir{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    #first_data{
+        padding-bottom: 15px;
+    }
+
+    .data_nir p{
+        margin-right: 15px;
+    }
+
+    .data_nir input{
+        width: 150px;
+        color: #fff;
+        background: none;
+        /* border-bottom: 1px solid red; */
+        text-align: center;
+        border: 1px solid #1b1b1b;
+        font-size: 15px;
+    }
+
+    .first_part input{
+        width: 150px;
+        color: #fff;
+        background: none;
+        border-bottom: 1px solid #fff;
+        text-align: center;
+        font-size: 15px;
+    }
+
+
+    .second_part{
+        margin-left: 21%;
+        margin-top: 70px;
+        width: calc(100% - 500px);
+        font-size: 15px;
+        color: #fff;
+    }
+
+    #d2{
+        margin-bottom: 15px;
+    }
+
+    #d2 input{
+        border-bottom: 1px solid #fff;
+        width: 30%;
+    }
+
+    #little_inp{
+        width: 50px;
+        border-bottom: 1px solid #fff;
+
+    }
+
+    #little_inp1{
+        width: 200px;
+        border-bottom: 1px solid #fff;
+
+    }
+
+    .row{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .search-box{
+        width: 100%;
+    }
+
+    .result-box{
+        background-color: #222;
+        width: 100%;
+        overflow-y: scroll;
+        height: auto;
+        max-height: 150px
+    }
+
+    .result-box::-webkit-scrollbar{
+        display: none;
+    }
+
+    .result-box ul{
+        list-style: none;
+        color: #fff;
+    }
+
+    .result-box li{
+        border-bottom: 1px solid #fff;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    .table-box{
+        margin-top:70px ;
+        color: #fff;
+        border-collapse: collapse;
+        width: calc(100% - 100px); /* Set the width of the table */
+        margin-left: 50px;
+        margin-right: 50px;
+
+    }
+
+    .table-box input{
+        text-align: center;
+    }
+
+    .table-box th, .table-box td {
+        border: 3px solid #222; /* Add a solid black border around cells */
+        padding: 8px; /* Add some padding for better appearance */
+        text-align: center; /* Center align text in cells */
+        font-size: 15px;
+        color: #fdfdfd;
+    }
+
+    #unu{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .f_button{
+        margin-left: 50px;
+        margin-right: 50px;
+        text-align: center;
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+
+    .f_button button{
+        background-color: #0f0f0f;
+        width: 100%;
+        height: 50px;
+        border-radius: 8px;
+        font-size: 15px;
+        color: #fdfdfd;
+        border: 1px solid #fdfdfd;
+        cursor: pointer;
+    }
+
+
+    .b_c button{
+        cursor: pointer;
+    }
+
+    #shortinp{
+        width: 80px;
+        background-color: transparent;
+        color: #fdfdfd ;
+        border: 1px solid #1b1b1b;
+    }
+
+    .table-box i{
+        font-size: 15px;
+        color: #fdfdfd;
+        cursor: pointer;
+    }
+
+    .table-box button{
+        background-color: #1b1b1b;
+        border: 1px solid #1b1b1b;
+    }
+
+    .table-box input{
+        background-color: #1b1b1b;
+        color: #fdfdfd;
+        border: 1px solid #1b1b1b;
+    }
+
+    .table-box .tr .td a{
+        cursor: pointer;
+    }
+}   
+

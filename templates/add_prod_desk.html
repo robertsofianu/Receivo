@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/add_desktop.css'>
+</head>
+<body>
+    <div class="container">
+        <form action="/add_p_d" method="post">
+            <div class="small_c">
+                <div class="input">
+                    <p>Product</p>
+                    <input type="text" name="pr" id="" value="{{pr}}">
+                </div>
+            </div>
+
+            <div class="small_c">
+                <div class="input">
+                    <p>Amount</p>
+                    <input type="text" value="{{am}}" name="am">
+                </div>
+            </div>
+
+            <div class="small_c">
+                <div class="input">
+                    <p>Unit</p>
+                    <select name="um" id="">
+                    <option value="BUC">BUC</option>
+                        <option value="KG">KG</option>
+                    </select>
+                </div>
+            </div>
+    
+
+            <div class="small_c">
+                <div class="input">
+                    <p>V.A.T.</p>
+                    <select name="tva" id="vatRate">
+                        <option value="0.09">9%</option>
+                        <option value="0.19">19%</option>
+                    </select>
+                </div>
+            </div>
+    
+            <div class="small_c">
+                <div class="input">
+                    <p>Purchase price</p>
+                    <input type="text" name="pp" id="purchasePrice" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="small_c">
+                <div class="input">
+                    <p>Selling Price</p>
+                    <input type="text" name="sp" id="sellingPrice" placeholder="Recomading price">
+                </div>
+                <button>Add product to data base</button> 
+            </div>
+
+    
+        </form>
+    </div>
+    <script src="../static/calc_price.js"></script>
+</body>
+</html>

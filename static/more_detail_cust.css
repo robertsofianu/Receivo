@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+@media screen and (max-width: 700px){
+    
+    .container{
+        text-align: center;
+    }
+
+    .top_b{
+        position: fixed;
+        top: 0;
+        background-color: #0f0f0f;
+        width: calc(100% - 0px); 
+        max-width: 1200px; 
+        height: auto;
+        border-bottom: 1px solid #333;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top_b p {
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+        color: #fdfdfd;
+        font-size: 15px;
+    }
+
+    .top_b a{
+        color: #fdfdfd;
+        font-size: 15px;
+        text-decoration: none;
+        margin-left: 25px;
+    }
+    
+    .data-box{
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+        max-height: 50%;
+        background-color: transparent;
+        overflow-x: scroll; 
+    }
+    
+    .data-box::-webkit-scrollbar{
+        display: none;
+    }
+    
+    .small_c{
+        margin-bottom: 10px;
+        background-color: #1b1b1b;
+        height: 80%;
+        overflow-y: scroll;
+    }
+    .small_input{
+        display: flex;
+        justify-content: space-between;
+        /* border-bottom: 1px solid #454545; */
+        padding: 10px;
+    }
+    .small_input p{
+        color: #fdfdfd;
+        font-size: 15px;
+    }
+    .small_input input{
+        width: 50%;
+        font-size: 15px;
+        background-color: #1b1b1b;
+        border: 1px solid #1b1b1b;
+        border-bottom: 1px solid #454545;
+        color: #fdfdfd;
+        text-align: center;
+    }
+    .small_input select{
+        width: 50%;
+        font-size: 15px;
+        background-color: #1b1b1b;
+        border: 1px solid #1b1b1b;
+        border-bottom: 1px solid #454545;
+        color: #fdfdfd;
+        text-align: center;
+    }
+    .line{
+        width: calc(100% - 100px);
+        height: 1px;
+        background-color: #454545;
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+    .button_container{
+        width: calc(100% - 200px);
+        margin-left: 100px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+    }
+    .button_container a{
+        color: #fdfdfd;
+    }
+    .button_container i{
+        font-size: 20px;
+    }
+
+    
+    
+    .icon-container {
+        position: fixed;
+        bottom: 0px; 
+        display: flex;
+        justify-content: space-between;
+        height: 30px;
+        width: calc(100% - 0px);
+        background-color: #0f0f0f;
+        border-top: 1px solid #333;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .small_i_c{
+        width: calc(100% - 100px);
+        margin-left: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .small_i_c a{
+        color: #fdfdfd;
+    }
+    .icon-container button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .icon-container i {
+        font-size: 30px; 
+    }  
+
+    .styled-table select{
+        background: transparent;
+        color: #fdfdfd;
+        border: 1px solid rgb(50, 54, 57);
+    }
+    
+    .styled-table option{
+        background: rgb(50, 54, 57);
+        color: #fdfdfd;
+    }
+}
+
+@media screen and (min-width: 700px){
+    
+
+    .container{
+        text-align: center;
+
+    }
+    
+    .data-box{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: auto;
+        max-height: 350px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: transparent;
+        border-radius: 18px;
+        border: 1px solid #fdfdfd;
+        padding-left: 20px;
+        padding-right: 20px;
+        overflow-x: scroll;
+        overflow-y: scroll;
+    }
+    
+    .data-box::-webkit-scrollbar{
+        display: none;
+    }
+    
+    
+    .styled-table {
+        border-collapse: collapse;
+        width: 100%; /* Set the width of the table */
+        
+    }
+    
+    .styled-table th, .styled-table td {
+        border: 3px solid #6f6f6f; /* Add a solid black border around cells */
+        padding: 8px; /* Add some padding for better appearance */
+        text-align: center; /* Center align text in cells */
+        font-size: 15px;
+        color: #fdfdfd;
+    }
+
+    .styled-table th{
+        background-color: rgb(36, 40, 42);
+    }
+    
+    .styled-table input{
+        width: auto;
+        height: auto;
+        background: transparent;
+        border: 1px solid rgb(50, 54, 57);
+        text-align: center;
+        color: #c1c1c1;
+        font-size: 15px;
+    }
+    
+    .styled-table td{
+        font-size: 15px;
+    }
+    
+    #u_m{
+        width: auto;
+    }
+    
+    .icon-container button{
+        display: none;
+    }
+    
+    
+    
+    
+    .styled-table select{
+        background: transparent;
+        color: #c1c1c1;
+        border: 1px solid rgb(50, 54, 57);
+    }
+    
+    .styled-table option{
+        background: rgb(50, 54, 57);
+        color: #fdfdfd;
+    }
+
+    .styled-table i{
+        font-size: 20px;
+    }
+
+    .styled-table button{
+        background-color: transparent;
+        color: #fdfdfd;
+        border: 1px solid rgb(50, 54, 57);
+    }
+    
+    .styled-table button:hover{
+        cursor: pointer;
+    }
+
+    .done{
+        position: absolute;
+        /* width: 200px; */
+        height: 100px;
+        left: 50%;
+        top: 90%;
+        transform: translate(-50%, -50%);
+        /* background: #fdfdfd; */
+    }
+
+    .done button{
+        color: #6f6f6f;
+        background-color: rgb(36, 40, 42);
+        width: 500px;
+        height: 50px;
+        border: 1px solid rgb(36, 40, 42);
+        border-radius: 18px;
+        font-size: 18px;
+    }
+}

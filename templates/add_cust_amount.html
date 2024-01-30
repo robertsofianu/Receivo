@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/add_c_amout.css'>
+    <script src="https://kit.fontawesome.com/f72ab65de3.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="top_b">
+            <a href="{{ url_for('back', param = 3) }}">back</a>
+            <p>customer</p>
+        </div>
+
+
+
+
+
+
+      
+
+        <div class="data-box">
+
+            <div class="input">
+                <p id="p1">Customer</p>                
+                <input type="text" name="produs" value="{{p1}}" id="input" autocomplete="off" disabled>
+            </div>
+            
+            <div class="input">
+                <p id="p1">Total Amount</p>                
+                <input type="text" value="{{amount}}" disabled>
+            </div>
+
+            <div class="input">
+                <p id="p1">Amount</p>                
+                <input type="text" name="nrProd" id="amount">
+            </div>
+
+            <div class="input" id="details">
+                <a href="#" id="show_more_details">Show more details -></a>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="icon-container">
+            <div class="button_int">
+                
+                <a href="#" id="add_c_amout"><button id="check"><i class="fa-solid fa-plus"></i></button></a>
+                
+                <a href="#" id="subtract_c_amout"><button id="check"><i class="fa-solid fa-minus"></i></button></a>
+            </div>
+                
+        </div>
+            
+
+
+
+    </div>
+    <script src="../static/add_c_amout.js"></script>
+</body>
+</html>

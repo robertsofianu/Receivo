@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/product_info.css'>
+    <script src="https://kit.fontawesome.com/f72ab65de3.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <div class="container">
+        <div class="data-box">
+            
+            <div class="input">
+                <p>Product</p>
+                <input type="text" name="product" id="input"
+                autocomplete="off">
+                <ul id="autocomplete-list"></ul>
+            </div>
+        
+        </div>
+
+        <div class="icon-container">
+            
+            
+            <form action="/add_new_info">
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+            </form>
+            
+            <a href="#" id="deleteLink"><button type="button"><i class="fa-solid fa-arrow-right"></i></button></a>
+            
+            <form action="/start">
+                <button><i class="fa-solid fa-house"></i></button>
+            </form>
+    
+    
+        </div>
+
+        <div class="desk_container">
+
+            <div class="search_box">
+                <form action="/search" method="POST">
+
+                    <div class="sp_content">
+                        
+                        <div class="row2">
+                            <p>
+                                Product
+                            </p>
+                            <input type="text" name="product" id="input-box"
+                                autocomplete="off" >
+                        </div>
+
+                        <div class="result-box">
+                            <ul>
+                                <li></li> 
+                            </ul>
+                        </div>
+                        
+
+                        <div class="b_box" id="buttonContainer">
+                            <button id="searchButton">Search</button>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+    </div>
+    <script src="../static/product_info.js"></script>
+
+</body>
+</html>
+
+
+

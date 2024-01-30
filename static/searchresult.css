@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+.container{
+    text-align: center;
+}
+
+@media screen and (max-width: 700px){
+    
+    .data-box{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        max-width: 100%;
+        width: calc(100% - 0px); 
+        max-width: 1200px; 
+        height: auto;
+        max-height:calc(100% - 200px);
+        transform: translate(-50%, -50%);
+        height: auto;
+    }
+
+    .data-box p{
+        color: #fdfdfd;
+        font-size: 20px;
+        padding-bottom: 5px;
+    }
+    
+    .input{
+        background-color: #0f0f0f;
+        width: calc(100% - 0px); 
+        max-width: 1200px; 
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .input input{
+        background: #fdfdfd;
+        border: 1px solid #fdfdfd;
+        border-radius: 5px;
+        padding-left: 5px;
+        height: 40px;
+        width: calc(100% - 50px);
+        color: #fdfdfd;
+        padding-left: 5px;
+        color: #0f0f0f;
+        font-size: 20px;
+    }
+
+    .icon-container {
+        position: fixed;
+        bottom: 20px; 
+        left: 20px; 
+        right: 20px; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent; 
+        padding: 10px;
+    }
+
+    .icon-container button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .icon-container i {
+        font-size: 30px; 
+    }
+
+    .desk_contaier{
+        display: none;
+    }
+
+}
+
+
+@media screen and (min-width: 700px) {
+    .data-box{
+        display: none;
+    }
+
+    .icon-container{
+        display: none;
+    }
+
+    .desk_container{
+        width: 100%;
+        height: auto;
+        min-height: 70%;
+        background-color: transparent;
+        border-radius: 8px;
+        text-align: center;
+        overflow-y: scroll;
+    }
+
+    .smal_C{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        background-color: #1b1b1b;
+        padding: 50px;
+        border-radius: 8px;
+    }
+    .smal_C button{
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .input{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .input p{
+        font-size: 15px;
+        color: #fdfdfd;
+    }
+
+    .input input{
+        width: 80%;
+        background-color: #1b1b1b;
+        border: 1px solid #1b1b1b;
+        border-bottom: 1px solid #fdfdfd;
+        color: #fdfdfd;
+        font-size: 15px;
+        padding-left: 5px;
+    }
+
+}

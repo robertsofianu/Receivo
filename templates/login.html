@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>NIR</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/login.css'>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="input_box">
+            <form action="/login" method="POST">
+                
+                
+                <h1>Log In</h1>
+                <br>
+                {% if invaid_login == True %}
+                <div class="inv-c">
+                    <p>Invalid credentials</p>
+                </div>
+                {% endif %}
+
+                {% if emailwassent == True %}
+                <p>Email was sent.</p>
+                {% endif %}
+                <br>
+                
+
+                <div class="p">
+                    <p>Username:</p>
+                </div>
+                <div class="input">
+                    <input type="text" name="username">
+                </div>
+
+                <br>
+
+                <div class="p">
+                    <p>Password:</p>
+                </div>
+                <div class="input">
+                    <input type="password" name="password">
+                </div>
+                
+                <div class="forget">
+                    <a href="{{url_for("forgetpass")}}">Forgot Password</a>
+                </div>      
+
+                <div class="register">
+                    <p>Don't have an accout <a href="{{url_for("signup")}}">Register</a></p>
+                </div>
+                <br>
+
+                <div class="buton">
+                    <button>Log In</button>
+                </div>
+            </form>
+
+            </div>
+
+
+
+    </div>
+</body>
+</html>

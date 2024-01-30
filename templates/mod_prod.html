@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/modify_product.css'>
+    <script src="https://kit.fontawesome.com/f72ab65de3.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <form action="/save" method="POST">
+        <div class="data-box">
+            {% if succes_mod == True %}
+            <p id="succes_mod">Modification Successful!</p>
+            {% endif %}
+            <div class="input">
+                <p>Product</p>
+                <input type="text" value="{{product}}" name="product">
+            </div>
+            
+            <div class="input">
+                <p>V.A.T.</p>
+                {% if tva == '9' %}
+                <select name="vat" id="vatRate">
+                    <option value="0.09">9%</option>
+                    <option value="0.19">19%</option>
+                </select>
+                {% else %}
+                <select name="vat" id="vatRate">
+                    <option value="0.19">19%</option>
+                    <option value="0.09">9%</option>
+                </select>
+                {% endif %}
+
+            </div>
+
+            <div class="input">
+                <p>Purchase price</p>
+                <input type="text" value="{{pp}}" name="pp" id="purchasePrice"> 
+            </div>
+
+            <div class="input">
+                <p>Sell price</p>
+                <input type="text" value="{{sp}}" name="sp" id="sellingPrice">
+            </div>
+
+        
+
+        </div>
+
+        <div class="icon-container">
+                    
+        
+                <button><i class="fa-solid fa-floppy-disk"></i></button>
+            </form>
+                    
+
+            <form action="">
+                <button>Back</button>
+            </form>
+        
+        
+        </div>
+
+        <div class="desk_contaier">
+            {% if succes_mod == True %}
+            <p id="succes_mod">Modification Successful!</p>
+            {% endif %}
+            <div class="smal_C">
+                <div class="input">
+                    <p>Product</p>
+                    <input type="text" value="{{product}}" disabled>
+                </div>
+                
+                <div class="input">
+                    <p>V.A.T.</p>
+                    <!-- <input type="text" value="{{vat}}%" disabled> -->
+                    {% if tva == '9' %}
+                    <select name="vat" id="vatRate" disabled>
+                        <option value="0.09">9%</option>
+                        <option value="0.19">19%</option>
+                    </select>
+                    {% else %}
+                    <select name="vat" id="vatRate" disabled>
+                        <option value="0.19">19%</option>
+                        <option value="0.09">9%</option>
+                    </select>
+                    {% endif %}
+                </div>
+    
+                <div class="input">
+                    <p>Purchase price</p>
+                    <input type="text" value="{{pp}} RON" disabled>
+                </div>
+    
+                <div class="input">
+                    <p>Sell price</p>
+                    <input type="text" value="{{sp}} RON" disabled>
+                </div>
+    
+                <form action="/edit_product">
+                    <button>Edit</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+<script src="../static/calc_price.js"></script>
+</body>
+</html> 

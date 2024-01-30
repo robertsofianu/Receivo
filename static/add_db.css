@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(50, 54, 57);
+}
+
+.container{
+    text-align: center;
+}
+
+
+.data-box{
+    position: absolute; 
+    top: 45%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 350px;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: transparent;
+    border-radius: 18px;
+    border: 1px solid #fdfdfd;
+    backdrop-filter: blur(220px);
+}
+
+.data-box p{
+    padding-top:25px;
+    color: #fdfdfd;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.input input{
+    border: 1px solid #fdfdfd;
+    background-color: transparent;
+    color: #fdfdfd;
+    width: 250px;
+    height: 40px;
+    border-radius: 18px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.input select{
+    border: 1px solid #fdfdfd;
+    background-color: transparent;
+    color: #fdfdfd;
+    width: 250px;
+    height: 40px;
+    border-radius: 18px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.input select option{
+    background-color: rgb(50, 54, 57);
+    color: #fdfdfd;
+}
+
+.icon-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: transparent; 
+    padding: 10px;
+}
+
+.icon-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+.icon-container i {
+    font-size: 30px; 
+}

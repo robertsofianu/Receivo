@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>NIR</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/main.css'>
+    <script src="https://kit.fontawesome.com/f72ab65de3.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="data-box">
+            
+            <form action="/add" method="POST" id="myForm">
+                <div class="input">
+                    <p>Date</p>
+                    <input type="date" name="data" id="dateInput">
+                </div>
+                <div class="input">
+                    <p>Invoice number</p>
+                    <input type="number" name="nrFac" id="invoiceInput">
+                </div>
+                <div class="input">
+                    <p>Provider</p>
+                    <input type="text" id="input" autocomplete="off" name="Furnizor">
+                    <ul id="autocomplete-list"></ul>
+                </div>
+                <div class="input">
+                    <p>Delegate</p>
+                    <input type="text" name="Delegat" id="delegateInput">
+                </div>
+            </div>
+            
+            <div class="icon-container">
+                <button type="submit" id="file_exb" style="display: none"><i class="fa-solid fa-file-export"></i></button>
+            </form>
+                    
+                    
+                
+                <form action="/start">
+                    <button id="homeb"><i class="fa-solid fa-house"></i></button>
+                </form>
+                
+                
+            </div>
+
+            <div class="desk_container">
+
+                <div class="main_buttons">
+
+                    <div class="funtion_button_div">
+
+                        <div class="button_main_fct">
+                            <form action="/finish_rec_notes_cl" method="POST">
+                                <div class="date">
+                                    <p>Finish</p>
+                                    <input type="month" name="end_date" id="month_input">
+                                </div>
+                                <div class="b_fisnih_box">
+                                    <button id="f_b" disabled>End Month</button>
+                                </div>
+                                {% if resp == 1 %}
+                                    <script>
+                                        alert("Month Finished")
+                                    </script>
+                                {% endif %}
+                            </form>
+                        </div>
+
+                        <div class="button_main_fct">
+
+                            <form action="/download_page" method="POST">
+                                <div class="date">
+                                    <p>Date</p>
+                                    <input type="month" name="dowload_date" id="dowload_date">
+                                </div>
+                                <div class="b_fisnih_box">
+                                    <button id="down_button" disabled>Download files</button>
+                                </div>
+                                {% if resp == 1 %}
+                                    <script>
+                                        alert("Month Finished")
+                                    </script>
+                                {% endif %}
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="redirect_b">
+    
+                        <div class="button_main">
+                            <form action="/product_info">
+                                <button><i class="fa-solid fa-tag"></i></button>
+                                <p>Products</p>
+                            </form>
+                        </div>
+    
+                        <div class="button_main">
+                            <form action="/clients">
+                                <button><i class="fa-solid fa-users"></i></i></button>
+                                <p>Customers</p>
+                            </form>
+                        </div>
+
+                        <div class="button_main">
+                            <form action="/logout">
+                                <button><i class="fa-solid fa-right-to-bracket"></i></button>
+                            </form>
+                            <p>Sign out</p>
+                        </div>
+                    </div>
+
+                </div> 
+
+                <div class="up">
+                    
+                    <form action="/create_nir_desk" method="post" id="myForm2">   
+                        <div class="first_part">
+
+                            <div class="date_firma">
+                                <div class="data_nir" id="first_data">
+                                    <p>S.C.</p>
+                                    <input type="text" value="PROTOSOF S.R.L.">
+                                </div>
+                                <div class="data_nir">
+                                    <p>Localitatea</p>
+                                    <input type="text" name="" id="" value="Protopopesti">
+                                </div>
+                            </div>
+
+                            <h1>NOTA DE RECEPTIE</h1>
+                            <div class="data_nir">
+                                <P>Nr.</P>
+                                <input type="number" name="desk_nr_number" id="" value="{{nr_nir}}">
+                            </div>
+                            <div class="data_nir">
+                                <p>Din</p>
+                                <input type="date" name="date_desk" id="dateInput2">
+                            </div>
+                        </div>
+
+                        <div class="second_part">
+                            <div class="data_nir" id="d2">
+                                <div class="search-box">
+                                    <div class="row">
+                                        <p>
+                                            Furnizor
+                                        </p>
+                                        <input type="text" name="furnizor_desk" id="input-box"
+                                            autocomplete="off" >
+                                    </div>
+            
+                                    <div class="result-box">
+                                        <ul>
+                                            <li></li> 
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_nir" id="d2">
+                                <p>Numarul si data facturii sau avizului de expediere</p>
+                                <input type="text" name="numar_factura_desk" id="invoiceInput2">
+                            </div>
+                            <div class="data_nir" id="d2">
+                                <p>Numele si prenumele delegatului</p>
+                                <input type="text" name="nume_delegat_desk" id="delegateInput2">
+                            </div>
+
+                            <div class="data_nir" id="d3">
+                                <p>B.I. Seria <input type="text" name="" id="little_inp"> nr. <input type="text" name="" id="little_inp"> eliberat de Politia <input type="text" name="" id="little_inp1"></p>
+                            </div>
+                        </div>
+
+
+                        <div class="b_c">
+
+                            <button id="file_exb2" style="display: none;" type="submit" disabled>Create nir</button>
+
+                        </div>
+
+
+                    </form>
+                
+                </div>
+
+                <div class="search_box">
+                    <form action="/add_desktop" method="POST">
+
+                        <div class="sp_content">
+
+                            {% if bool_invalid_desk_data == True%}
+                                <p>Invalid credentials</p>
+                            {% endif %}
+                            
+                            <div class="row2">
+                                <p>
+                                    Product
+                                </p>
+                                <input type="text"
+                                    autocomplete="off" disabled>
+                            </div>
+                            
+    
+                            <div class="row2" id="pad_row">
+                                <p>Amout</p>
+                                <input type="text" disabled>
+                            </div>
+    
+                            <button disabled>Add</button>
+                            
+                        </div>
+                    </form>
+                </div>
+
+                <div class="midle">
+    
+                    <table class="table-box">
+                        <tr>
+                            <th>Denumire Produs</th>
+                            <th>U/M</th>
+                            <th>Dupa factura sau aviz</th>
+                            <th>La receptie</th>
+                            <th>Pret Furnizor</th>
+                            <th>Valoare Furnizor</th>
+                            <th>T.V.A. Incasat de furnizor</th>
+                            <th>Total valoare factura</th>
+                            <th>Pret cu adaosul practicat %</th>
+                            <th>Valoare la pret cu adaos</th>
+                            <th>Valoare la pret cu adaos is T.V.A.</th>
+                        </tr>
+    
+                        {% for elem in d%}
+                        <tr>
+                            <td>{{d[0]}}</td>
+                            <td>a</td>
+                            <td>a</td>
+                            <td>a</td>
+                            <td>a</td>
+                            <td>a</td>
+                            <td>a</td>
+                            <td>a</td>
+                            <td>a</td>
+                            <td>a</td>
+                            <td>a</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+    
+                    <div class="f_button">
+    
+                        <button disabled>Finish</button>
+    
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <script src="../static/mainMain.js"></script>
+    
+</body>
+
+</html>

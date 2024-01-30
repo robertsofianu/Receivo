@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/prev_final.css'>
+    <script src="https://kit.fontawesome.com/f72ab65de3.js" crossorigin="anonymous"></script>
+    
+    
+</head>
+<body>
+    <div class="container">
+        <div class="data-box">
+            <table class="styled-table">
+                <tr>
+                    <th>Product</th>
+                    <th>Provider Price</th>
+                    <th>Seling Price</th>
+                    <th>U/M</th>
+                    <th>Amout</th>
+                    <th>V.A.T.</th>
+                    <th>Total</th>
+                </tr>
+                {% for list in data %}
+                    <tr>
+                        <td>{{list[0]}}</td>
+                        <td>{{list[1]}}</td>
+                        <td>{{list[2]}}</td>
+                        <td>{{list[3]}}</td>
+                        <td>{{list[4]}}</td>
+                        <td>{{list[5]}}%</td>
+                        <td>{{list[6]}}</td>
+                        
+                    </tr>
+                {% endfor%}
+            </table>
+
+            
+            
+        </div>
+        <div class="icon-container">
+                
+            <form action="/fini">
+                <button><i class="fa-solid fa-house"></i></button>
+            </form>
+
+            <form action="/final_mod">
+                <button><i class="fa-solid fa-pen-to-square"></i></button>
+            </form>
+
+
+
+            <form action="/start">
+                <button><i class="fa-solid fa-house"></i></button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

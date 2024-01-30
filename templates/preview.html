@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/preview.css'>
+    <script src="https://kit.fontawesome.com/f72ab65de3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="data-box">
+
+            <div class="display-box">
+                <ol>
+                    {% for item in all_products %}
+                    <li>{{ loop.index }}. {{ item }} </li>
+                    {% endfor %}
+                </ol>
+            </div>
+
+        </div>
+
+        <div class="icon-container">
+                    
+            <form action="/receiving_note">
+                <button><i class="fa-solid fa-file-excel"></i></i></button>
+            </form>
+
+            <form action="/start">
+                <button><i class="fa-solid fa-house"></i></button>
+            </form>
+        
+        
+        </div>
+
+    </div>
+</body>
+</html>

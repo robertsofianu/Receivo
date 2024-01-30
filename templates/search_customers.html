@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/s_c.css'>
+    <script src="https://kit.fontawesome.com/f72ab65de3.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="top_b">
+
+
+            <div class="search-box">
+                <div class="row">
+                    <input type="text" name="product" id="input-box"
+                    autocomplete="off" placeholder="Search">
+                </div>
+
+                <div class="result-box">
+                    <ul>
+                        <li></li> 
+                    </ul>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="data-box">
+            {% for cl in data%}
+            <div class="inp_box">
+                <p><a href="{{ url_for('edit_cust', p1=cl) }}">{{cl}}</a></p>
+            </div>
+            {% endfor %}
+        </div>
+        
+  
+
+     
+        
+        <div class="add_cus">
+            <a href="#" id="search_customer"><i class="fa-solid fa-magnifying-glass"></i></a>
+
+            <form action="/clients">
+                <button id="arrow"><i class="fa-solid fa-arrow-left"></i></button>
+            </form>
+        </div>
+    </div>
+    <script src="../static/search_customer.js" defer></script>
+</body>
+</html>

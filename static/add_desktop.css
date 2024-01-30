@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+@media screen and (min-width: 700px) {
+    .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);   
+        width: calc(100% - 1000px);
+    }
+
+    .small_c{
+        width: calc(100%-200px);
+        background-color: #1b1b1b;
+        margin-bottom: 20px;
+        text-align: center;
+        height: auto;
+        padding: 30px;
+        border-radius: 8px;
+    }
+
+    .input{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .input input{
+        width: 70%;
+        font-size: 15px;
+        background-color: #1b1b1b;
+        border: 1px solid #1b1b1b;
+        border-bottom: 1px solid #fdfdfd;
+        color: #fdfdfd;
+        padding-left: 5px;
+    }
+
+    .input p{
+        color: #fdfdfd;
+        font-size: 15px;
+    }
+
+    .input select{
+        width: 70%;
+        font-size: 15px;
+        background-color: #1b1b1b;
+        border: 1px solid #1b1b1b;
+        border-bottom: 1px solid #fdfdfd;
+        color: #fdfdfd;
+        padding-left: 5px;
+    }
+
+    .small_c button{
+        width: 80%;
+        background-color: #fff;
+        color: #1b1b1b;
+        margin-top: 50px;
+        border: 1px solid #fdfdfd;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .container{
+        text-align: center;
+        height: 100%;
+    }
+
+    .input{
+        background-color: #0f0f0f;
+        width: calc(100% - 0px); 
+        max-width: 1200px; 
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .input input{
+        background: #fdfdfd;
+        border: 1px solid #fdfdfd;
+        border-radius: 5px;
+        padding-left: 5px;
+        height: 40px;
+        width: calc(100% - 50px);
+        color: #fdfdfd;
+        padding-left: 5px;
+        color: #0f0f0f;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .input select{
+        background: #fdfdfd;
+        border: 1px solid #fdfdfd;
+        border-radius: 5px;
+        padding-left: 5px;
+        height: 40px;
+        width: calc(100% - 50px);
+        color: #fdfdfd;
+        padding-left: 5px;
+        color: #0f0f0f;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .input p{
+        color: #fdfdfd;
+        font-size: 20px;
+        padding-bottom: 5px;
+    }
+
+    .small_c button{
+        height: 40px;
+        width: calc(100% - 50px);
+        font-size: 20px;
+    }
+}

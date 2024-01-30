@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/prev_final.css'>
+    <script src="https://kit.fontawesome.com/f72ab65de3.js" crossorigin="anonymous"></script>
+    
+    
+</head>
+<body>
+    <form action="/fini_desk" method="POST">
+        <div class="container">
+
+            <div class="top_b">
+                <a href="{{ url_for('back', param = 1) }}">back</a>
+                <p>finish</p>
+            </div>
+
+            <div class="data-box">
+
+                {% for list in data %}
+                    <div class="small_c">
+                        <div class="small_input">
+                            <p>Product</p>
+                            <input type="text" name="{{list[7]}}"  value="{{list[0]}}">
+                        </div>
+
+                        <div class="small_input">
+                            <p>Provider price</p>
+                            <input type="text" name="{{list[8]}}" value="{{list[1]}}">
+                        </div>
+
+                        <div class="small_input">
+                            <p>Selling price</p>
+                            <input type="text" name="{{list[9]}}"  value="{{list[2]}}">
+                        </div>
+                        
+                        
+                        <div class="small_input">
+                            <p>Unit</p>
+                            {% if list[3] == "BUC" %}
+                            <select name="{{list[10]}}" id="u_m">
+                                <option value="BUC">BUC</option>
+                                <option value="KG">KG</option>
+                            </select>
+                            {% else %}
+                            <select name="{{list[10]}}" id="u_m">
+                                <option value="KG">KG</option>
+                                <option value="BUC">BUC</option>
+                            </select>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="small_input">
+                            <p>Amount</p>
+                            <input type="text" name="{{list[11]}}"  value="{{list[4]}}">
+                        </div>
+
+                        <div class="small_input">
+                            <p>V.A.T.</p>
+                            {% if list[5] == "9"%}
+                                <select name="{{list[12]}}" >
+                                    <option value="9">9%</option>
+                                    <option value="19">19%</option>
+                                </select>
+                            
+                            {% else %}
+                                <select name="{{list[12]}}" id="u_m">
+                                    <option value="19">19%</option>
+                                    <option value="9">9%</option>
+                                </select>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="small_input">
+                            <p>Selling price</p>
+                            <input type="text" name="{{list[13]}}" value="{{list[6]}}">
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="small_input">
+                            <div class="button_container">
+                                <a href="{{ url_for('modify_page', parameter1=list[0]) }}"><i class="fa-solid fa-pen-to-square"></i></button></a>
+                                <a href="{{ url_for('delete2', parameter1=list[7]) }}"><i class="fa-solid fa-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor%}            
+            </div>
+
+            <div class="icon-container">
+                <div class="small_i_c">
+                    <button id="button1"><i class="fa-solid fa-check-double"></i></button>
+                    <a href="{{ url_for('start')}}"><i class="fa-solid fa-house"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

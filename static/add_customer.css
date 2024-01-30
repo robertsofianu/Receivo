@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+.container{
+    text-align: center;
+
+}
+
+@media screen and (max-width: 700px) {
+    .data-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 100%;
+        width: calc(100% - 0px); 
+        max-width: 1200px; 
+        height: auto;
+        max-height:calc(100% - 200px);
+        transform: translate(-50%, -50%);
+        height: auto;
+    }
+
+    .inp_box{
+        background-color: #0f0f0f;
+        width: calc(100% - 0px); 
+        max-width: 1200px; 
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .inp_box p{
+        color: #fdfdfd;
+        padding-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .inp_box input{
+        background: #fdfdfd;
+        border: 1px solid #fdfdfd;
+        border-radius: 5px;
+        padding-left: 5px;
+        height: 40px;
+        width: calc(100% - 50px);
+        color: #fdfdfd;
+        padding-left: 5px;
+        color: #0f0f0f;
+        font-size: 20px;
+    }
+
+    .top_b{
+        position: fixed;
+        top: 0;
+        background-color: #0f0f0f;
+        width: calc(100% - 0px); 
+        max-width: 1200px; 
+        height: auto;
+        border-bottom: 1px solid #333;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        align-items: center;
+    }
+
+    .top_b p{
+        color: #fdfdfd;
+        font-size: 20px;
+    }
+
+    .add_cus{
+        position: fixed;
+        bottom: 0px; 
+        height: 30px;
+        width: calc(100% - 0px);
+        background-color: #0f0f0f;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #333;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .add_cus button{
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .add_cus i{
+        font-size: 30px;
+    }
+}
+
+
+
+
+@media screen and (min-width: 700px) {
+    
+}

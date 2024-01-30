@@ -1,0 +1,43 @@
+body{
+    background-color: #000;
+}
+
+
+.container{ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.main {
+    position: relative;
+    top: 0;
+    left: 0; 
+    transition: left 1s ease, top 1s ease;
+    background-color: #1b1b1b;
+    width: 500px;
+    height: 150px;
+
+}
+
+#main2{
+    position: relative;
+    top: 0;
+    left: 0; 
+    transition: left 1s ease, top 1s ease;
+}
+
+#main3 {
+    position: relative;
+    transition: left 1s ease, top 1s ease;
+
+}
+
+#main4 {
+    position: relative;
+    transition: left 1s ease, top 1s ease;
+
+}

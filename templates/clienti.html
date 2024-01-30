@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='../static/clienti.css'> -->
+    <script src="https://kit.fontawesome.com/f72ab65de3.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    /* background-color: rgb(50, 54, 57); */
+    background-color: #000;
+}
+
+.container{
+    text-align: center;
+
+}
+
+@media screen and (max-width: 700px){
+    .data-box{
+        max-width: 100%;
+        width: calc(100% - 0px); 
+        max-width: 1200px; 
+        height: auto;
+        max-height:calc(100% - 200px);
+        margin-top: 55px;
+        margin-bottom: 67px;
+    }
+
+    .top_b{
+        position: fixed;
+        top: 0;
+        background-color: #0f0f0f;
+        width: calc(100% - 0px); 
+        max-width: 1200px; 
+        height: auto;
+        border-bottom: 1px solid #333;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top_b p{
+        font-size: 15px;
+        margin-right: 20px;
+        color: #fdfdfd;
+    }
+
+    .top_b a{
+        font-size: 15px;
+        margin-left: 20px;
+        color: #fdfdfd;
+    }
+    
+    .top_b form{
+        background: #333;
+        border: 1px solid #333;
+        border-radius: 5px;
+        padding-left: 5px;
+        height: 25px;
+        width: calc(100% - 250px);
+        color: #666;
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .top_b form button{
+        background-color: transparent;
+        border: none;
+        color: #666;
+        width: calc(100% - 3px); 
+        text-align: left;
+    }
+
+    .add_cus{
+        position: fixed;
+        bottom: 0px; 
+        height: 30px;
+        width: calc(100% - 0px);
+        background-color: #0f0f0f;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #333;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        /* width: calc(100% - 25px); */
+    }
+
+
+    .inp_box{
+        background-color: #0f0f0f;
+        width: calc(100% - 0px); 
+        max-width: 1200px; 
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .inp_box a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .add_cus button{
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .add_cus i{
+        font-size: 30px;
+    }
+
+    #b1{
+        margin-left: 50px;
+    }
+
+    #b2{
+        margin-right: 50px;
+    }
+}
+
+@media screen and (min-width: 700px){
+    
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top_b">
+            <a href="{{url_for('start')}}">back</a>
+            <form action="/search_customers">
+                <button>Search</button>
+            </form>
+            <p>customers</p>
+        </div>
+        <div class="data-box">
+            {% for cl in data%}
+            <div class="inp_box">
+                <p><a href="{{ url_for('edit_cust', p1=cl) }}">{{cl}}</a></p>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="add_cus">
+            <form action="/add_client">
+                <button id="b1"><i class="fa-solid fa-user-plus"></i></button>
+            </form>
+            <form action="/search_date">
+                <button id="b2"><i class="fa-solid fa-calendar-days"></i></button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

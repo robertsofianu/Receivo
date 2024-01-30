@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>NIR</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/index.css'>
+    <script src="https://kit.fontawesome.com/f72ab65de3.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>Welcome to Receivo!</h1>
+        </div>
+
+        <div class="icon-container">
+            <form action="/receiving_note">
+                <button><i class="fa-solid fa-file-excel"></i></i></button>
+            </form>
+
+            <form action="/product_info">
+                <button><i class="fa-solid fa-tag"></i></button>
+            </form>
+
+        
+            <form action="/clients">
+                <button><i class="fa-solid fa-users"></i></i></button>
+            </form>
+
+            <form action="/logout">
+                <button><i class="fa-solid fa-right-to-bracket"></i></button>
+            </form>
+        </div>
+
+
+
+
+
+
+
+        <div class="c_conitaier">
+            <div class="small_c" id="fist_s_con">
+                <div class="mini_c">
+                    <div class="m_c">
+                        <form action="/receiving_note">
+                            <button><i class="fa-solid fa-file-excel"></i></button>
+                        </form>
+                        <p>Create a new receiving note</p>
+                    </div>
+                </div>
+                
+                <div class="mini_c" id="c2">
+                    <div class="m_c">
+                        <form action="/product_info">
+                            <button><i class="fa-solid fa-tag"></i></button>
+                        </form>
+                        <p>Product info</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="small_c">
+                
+                <div class="mini_c" id="c3">
+                    <div class="m_c">
+                        <form action="/clients">
+                            <button><i class="fa-solid fa-download"></i></button>
+                        </form>
+                        <p>Download finished receiving notes</p>
+                    </div>
+                </div>
+            
+                <div class="mini_c" id="c4">
+                    <div class="m_c">
+                        <form action="/logout">
+                            <button><i class="fa-solid fa-right-to-bracket"></i></button>
+                        </form>
+                        <p>Sign out</p>
+                    </div>
+                </div>
+
+            </div>
+        
+        </div>
+
+        
+        
+    </div>
+    <script src="../static/index.js"></script>
+</body>
+
+</html>

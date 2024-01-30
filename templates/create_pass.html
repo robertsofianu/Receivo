@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>NIR</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/create_pass.css'>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="input_box">
+            <form action="/add_user_password" method="POST">
+
+                
+                <h1>Create Password</h1>
+                {% if passwords_match == False %}
+                <br>
+                <p>Passwords must march</p>
+                {% endif %}
+                <br>
+                
+                <div class="input">
+                    <input type="hidden" name="username" value="{{username}}">
+                </div>
+
+                <br>
+
+                <div class="p">
+                    <p>Password</p>
+                </div>
+                <div class="input">
+                    <input type="password" name="password">
+                </div>
+                
+                <br>
+                
+                <div class="p">
+                    <p>Retype Password</p>
+                </div>
+                <div class="input">
+                    <input type="password" name="repassword">
+                </div>
+
+                <div class="register">
+                    <p>Back to <a href="{{url_for("home")}}">Log in</a></p>
+                </div>
+
+                <br>
+
+                <div class="buton">
+                    <button>Sign Up</button>
+                </div>
+            </form>
+            <br>
+
+            </div>
+
+
+
+    </div>
+</body>
+</html>
